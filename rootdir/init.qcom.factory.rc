@@ -26,25 +26,11 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-# Define fastmmi
-service fastmmi /system/bin/mmi
-    user root
-    group root
-    disabled
-
-
 on property:sys.boot_mode=ffbm
     write -p /dev/block /dev/block/bootdevice/by-name/misc "ffbm-01"
 
 on property:sys.boot_mode=normal
     write -p /dev/block /dev/block/bootdevice/by-name/misc "normal"
-
-service gx_fpd_fastmmi /system/bin/gx_fpd
-     class core
-     user root
-     group system system
-     oneshot
-     disabled
 
 # Creating a scratch storage on /data for factory testing.
 on factory-fs
@@ -265,11 +251,7 @@ on mmi
     chown system system /sys/kernel/ipv4/tcp_rmem_min
     chown system system /sys/kernel/ipv4/tcp_rmem_def
     chown system system /sys/kernel/ipv4/tcp_rmem_max
-    chown root radio /proc/cmdline
-
-    # Goodix Fingerprint
-    chown system system /dev/goodix_fp
-    chmod 0644 /dev/goodix_fp 
+    chown root radio /proc/cmdline 
 
     # Define default initial receive window size in segments.
     setprop net.tcp.default_init_rwnd 60
@@ -283,8 +265,8 @@ on mmi
 
     #mkdir for factory data files.
     mkdir /cache/FTM_AP 0750 root root
+
     #set property for sys.usb.config
-#+Req 248140 haozhenghui.wt,modify,20170327,系统自带
     setprop sys.usb.config diag,adb
 #-Req 248140 haozhenghui.wt,modify,20170327,系统自带
     #sensor settings
@@ -301,17 +283,14 @@ on mmi
     start logd
     start debuggerd
     start debuggerd64
-#+Req 248140 haozhenghui.wt,modify,20170327,系统无法启动
     start servicemanager
     start surfaceflinger
-#-Req 248140 haozhenghui.wt,modify,20170327,系统无法启动
     start per_mgr
     start ril-daemon
     start qcom-sh
     start config_bluetooth
     start sensors
     #start media
-    start fastmmi
     start wcnss-service
     start qcom-post-boot
     start rmt_storage
@@ -321,7 +300,6 @@ on mmi
     start qcomsysd
     start ptt_ffbm
     start tftp_server
-    start gx_fpd_fastmmi   
     start qseecomd
 
 on ffbm

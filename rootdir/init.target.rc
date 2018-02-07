@@ -117,22 +117,10 @@ service qseecomd /system/bin/qseecomd
    user root
    group root
 
-#service aostlmd /system/bin/aostlmd
-#   class late_start
-#   user system
-#   group system
-
 service perfd /system/vendor/bin/perfd
    class main
    user root
    disabled
-
-service gamed /system/vendor/bin/gamed
-   class main
-   user system
-   group system
-   disabled
-   socket gamed seqpacket 0640 system system
 
 service thermal-engine /system/vendor/bin/thermal-engine
    class main
@@ -243,13 +231,7 @@ on charger
     setprop persist.sys.usb.config mass_storage
     start qcom-post-boot
     setprop persist.sys.usb.config mass_storage
-    #start hvdcp_opti
-
-#service hbtp /system/vendor/bin/hbtp_daemon
-    #class main
-    #user system
-    #group system
-    #disabled
+    start hvdcp_opti
 
 service dtseagleservice /system/bin/dts_eagle_service
     class late_start
