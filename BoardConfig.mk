@@ -183,6 +183,9 @@ HWUI_COMPILE_FOR_PERF := true
 BOARD_HARDWARE_CLASS += \
     $(DEVICE_PATH)/lineagehw
 
+# Lights
+TARGET_PROVIDES_LIBLIGHT := true
+
 # Tap2Wake
 TARGET_TAP_TO_WAKE_NODE := "/proc/gesture/onoff"
 
