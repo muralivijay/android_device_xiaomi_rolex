@@ -61,3 +61,4 @@ if [ -n "$RADIO_SRC" ]; then
 fi
 
 "$MY_DIR"/setup-makefiles.sh
+
