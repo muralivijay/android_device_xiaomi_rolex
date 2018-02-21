@@ -236,3 +236,6 @@ ro.config.swap=true
 
 # Fix DT2W
 dt2w.enabled=1
+
+# Charger
+persist.usb.hvdcp.detect=true
