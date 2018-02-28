@@ -144,6 +144,9 @@ USE_OPENGL_RENDERER := true
 # Fast charging support
 HEALTHD_USE_FASTCHG_STATUS := true
 
+# Extended Filesystem Support
+TARGET_EXFAT_DRIVER := sdfat
+
 # Filesystem
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_USERIMAGES_USE_EXT4 := true
