@@ -489,6 +489,11 @@ service baseband-sh /system/bin/sh /init.baseband.sh
     user root
     oneshot
 
+service dmesg-sh /system/bin/sh /init.dmesg.sh
+    class late_start
+    user root
+    oneshot
+
 service qcom-c_main-sh /system/bin/sh /init.class_main.sh
     class main
     user root
