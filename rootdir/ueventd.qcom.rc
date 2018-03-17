@@ -279,3 +279,7 @@
 /dev/spidev7.1            0660  system system
 /dev/spidev6.1            0660  system system
 #bug 287072 libin.wt 20170926 ADD spi infrared control end
+
+# Consumer IR
+/sys/devices/soc/soc:gpio-leds/leds/infrared		brightness		0664   system     system
+/sys/devices/soc/soc:gpio-leds/leds/infrared		transmit		0664   system     system
