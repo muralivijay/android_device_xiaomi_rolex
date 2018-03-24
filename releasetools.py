@@ -1,4 +1,4 @@
-# Copyright (C) 2017 The Mokee Open Source Project
+# Copyright (C) 2018 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@ def FullOTA_InstallEnd(info):
   ImportBkpBootloaderFirmware(info)
 
 def ImportMainBootloaderFirmware(info):
-  info.script.AppendExtra('ui_print("Flashing MultiRom 7.11.16 Firmware.");')
+  info.script.AppendExtra('ui_print("Flashing MIUI.AM 8.22 Firmware.");')
   info.script.AppendExtra('package_extract_file("install/firmware-update/cmnlib64.mbn", "/dev/block/bootdevice/by-name/cmnlib64");')
   info.script.AppendExtra('package_extract_file("install/firmware-update/cmnlib.mbn", "/dev/block/bootdevice/by-name/cmnlib");')
   info.script.AppendExtra('package_extract_file("install/firmware-update/rpm.mbn", "/dev/block/bootdevice/by-name/rpm");')
@@ -37,7 +37,7 @@ def ImportMainBootloaderFirmware(info):
   info.script.AppendExtra('package_extract_file("install/firmware-update/splash.img", "/dev/block/bootdevice/by-name/splash");')
 
 def ImportBkpBootloaderFirmware(info):
-  info.script.AppendExtra('ui_print("Flashing Backup MultiRom 7.11.16 Firmware.");')
+  info.script.AppendExtra('ui_print("Flashing Backup MIUI.AM 8.22 Firmware.");')
   info.script.AppendExtra('package_extract_file("install/firmware-update/cmnlib64.mbn", "/dev/block/bootdevice/by-name/cmnlib64bak");')
   info.script.AppendExtra('package_extract_file("install/firmware-update/cmnlib.mbn", "/dev/block/bootdevice/by-name/cmnlibbak");')
   info.script.AppendExtra('package_extract_file("install/firmware-update/rpm.mbn", "/dev/block/bootdevice/by-name/rpmbak");')
