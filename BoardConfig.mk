@@ -217,9 +217,6 @@ BLOCK_BASED_OTA := true
 # Peripheral manager
 TARGET_PER_MGR_ENABLED := true
 
-# Properties
-TARGET_VENDOR_PROP := $(DEVICE_PATH)/vendor.prop
-
 # Power
 #TARGET_HAS_LEGACY_POWER_STATS := true
 
