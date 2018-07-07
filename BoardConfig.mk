@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2017-2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -92,7 +92,6 @@ TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
-BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BLUETOOTH_HCI_USE_MCT := true
 QCOM_BT_USE_SMD_TTY := true
@@ -171,14 +170,10 @@ DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/compatibility_matrix.xml
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_rolex
-TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
 TARGET_RECOVERY_DEVICE_MODULES := libinit_rolex
 
 # HWUI
 HWUI_COMPILE_FOR_PERF := true
-
-# Keymaster
-TARGET_PROVIDES_KEYMASTER := true
 
 # Lineage Hardware
 BOARD_HARDWARE_CLASS += \
@@ -217,7 +212,6 @@ BOARD_USES_QCOM_HARDWARE := true
 TARGET_USE_SDCLANG := true
 
 # RIL
-PROTOBUF_SUPPORTED := true
 TARGET_RIL_VARIANT := caf
 
 # Recovery
