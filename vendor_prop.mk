@@ -80,7 +80,8 @@ sdm.debug.disable_rotator_split=1 \
 sdm.debug.disable_skip_validate=1 \
 sdm.perf_hint_window=50 \
 debug.hwui.profile=true \
-qemu.hw.mainkeys=1
+qemu.hw.mainkeys=1 \
+persist.graphics.vulkan.disable=true
 
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
