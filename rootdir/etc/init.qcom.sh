@@ -436,3 +436,6 @@ esac
 
 # Remove recovery cache from persist
 rm -rf /mnt/vendor/persist/cache/recovery
+
+# Grep the modem partition for baseband version and set it
+setprop gsm.version.baseband `strings /firmware/image/modem.b12 | grep "^MPSS.JO." | head -1

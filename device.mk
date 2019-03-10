@@ -322,7 +322,6 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
-    init.baseband.sh \
     init.qcom.post_boot.sh \
     init.qcom.usb.sh \
     init.qcom.sh \
