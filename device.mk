@@ -170,6 +170,9 @@ PRODUCT_PACKAGES += \
     ethertypes \
     libebtc
 
+# EGL
+TARGET_USES_CAF_DISPLAY_BLOB := true
+
 # FM
 PRODUCT_PACKAGES += \
     FMRadio \
