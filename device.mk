@@ -18,7 +18,6 @@ $(call inherit-product, vendor/xiaomi/rolex/rolex-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
@@ -169,6 +168,9 @@ PRODUCT_PACKAGES += \
     ebtables \
     ethertypes \
     libebtc
+
+# EGL
+TARGET_USES_CAF_DISPLAY_BLOB := true
 
 # FM
 PRODUCT_PACKAGES += \
@@ -369,9 +371,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     telephony-ext \
     ims-ext-common
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \

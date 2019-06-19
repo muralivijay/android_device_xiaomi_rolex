@@ -133,7 +133,6 @@ TARGET_USES_ION := true
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_GRALLOC1 := true
 TARGET_USES_HWC2 := true
-TARGET_USES_COLOR_METADATA := true
 
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 2048*1024
@@ -169,9 +168,6 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/vendor_framework_co
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/compatibility_matrix.xml
-
-# Lineage Hardware
-JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(DEVICE_PATH)/lineagehw|**/*.java
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
@@ -215,9 +211,6 @@ TARGET_RIL_VARIANT := caf
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.qcom
-
-# Security patch level
-VENDOR_SECURITY_PATCH := 2019-05-05
 
 # SELinux
 #include device/qcom/sepolicy/sepolicy.mk
