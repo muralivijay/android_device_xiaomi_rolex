@@ -21,6 +21,7 @@ $(call inherit-product, vendor/elite/config/common.mk)
 
 PRODUCT_NAME := elite_rolex
 BOARD_VENDOR := Xiaomi
+TARGET_BOOT_ANIMATION_RES := 720
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
