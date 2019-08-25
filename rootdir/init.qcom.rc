@@ -46,8 +46,6 @@ on init
     chown root system /sys/fs/cgroup/memory/bg/tasks
     chmod 0660 /sys/fs/cgroup/memory/bg/tasks
 
-    start graphics-sh
-
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
 
@@ -482,12 +480,6 @@ service vendor.dataadpl /vendor/bin/adpl
     class main
     user radio
     group radio oem_2901 diag usb net_admin
-
-service graphics-sh /vendor/bin/init.qcom.graphics.sh
-    class core
-    user root
-    disabled
-    oneshot
 
 service vendor.sensors.qti /vendor/bin/sensors.qti
     class core
